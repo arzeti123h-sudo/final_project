@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tech Team | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="clickSound" src="click.mp3"></audio>
+    <audio id="transitionSound" src="whoosh.mp3"></audio>
+
+    <!-- 1. Welcome Screen -->
+    <div class="welcome" id="welcome">
+        <div id="starfieldContainer"></div>
+        <div id="particleContainer" class="particle-container"></div>
+        
+        <div class="welcome-content">
+            <img src="logo-removebg-preview.png" alt="Logo" class="school-logo">
+            <h1 class="glow-text">ICT FINAL PROJECT</h1>
+            <p>Project by: Arezti 9F || Felicia 9F || Nabiela 9F</p>
+            <button id="startBtn" class="btn-primary">ENTER EXPERIENCE</button>
+            <h2 id="countdown" class="countdown-text hidden">3</h2>
+        </div>
+
+        <div class="wave-container">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <!-- Warna diatur via CSS nth-child di atas -->
+            <use xlink:href="#gentle-wave" x="48" y="0" />
+            <use xlink:href="#gentle-wave" x="48" y="3" />
+            <use xlink:href="#gentle-wave" x="48" y="5" />
+            <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+    </svg>
+</div>
+    </div>
+
+    <!-- 2. Main Content Page -->
+    <main class="main-content" id="mainPage" style="display: none;">
+        <nav class="navbar">
+            <div class="nav-brand">
+        <img src="logo-removebg-preview.png" alt="Logo ABBS" class="nav-logo">
+        <span class="logo-text">ICT Portfolio</span>
+        </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects-7">Grade 7</a></li>
+                <li><a href="#projects-8">Grade 8</a></li>
+                <li><a href="#projects-9">Grade 9</a></li>
+                <li><a href="#about">Creators</a></li>
+                <li><a href="#aspirasi">Aspirasi</a></li> 
+            </ul>
+        </nav>
+
+        <!-- Section: Hero -->
+<section id="home" class="hero-minimal">
+    <div class="hero-main-content">
+        <div class="particles-bg">
+        <span class="p-dot"></span>
+        <span class="p-dot"></span>
+        <span class="p-dot"></span>
+        <span class="p-dot"></span>
+        <span class="p-dot"></span>
+    </div>
+        <div class="top-badge">2023-2026</div>
+        
+        <h1 class="elegant-title">
+         <span class="soft-gradient">ICT PROJECT ARCHIVE</span>
+        </h1>
+        
+        <p class="elegant-desc">
+           An interactive portfolio website that summarizes the entire ICT learning journey from 7th to 9th grade at ABBS Junior High School.
+        </p>
+
+        <div class="credit-box">
+            <span class="by-text">PROJECT BY</span>
+            <div class="names-container">
+    <div class="glass-card">
+        <span class="card-num">01</span>
+        <p class="card-name">Arezti Hanan Hapsari</p>
+    </div>
+    <div class="glass-card">
+        <span class="card-num">02</span>
+        <p class="card-name">Azka Felicia Binar Velsignelse</p>
+    </div>
+    <div class="glass-card">
+        <span class="card-num">03</span>
+        <p class="card-name">Nabiela Fithria</p>
+    </div>
+</div>
+        </div>
+
+        <div class="hero-btns-compact">
+          <a href="#projects-7" class="btn-chic">Explore Work ✨</a>
+        </div>
+    </div>
+</section>
+        <!-- Section: Grade 7 Projects -->
+        <section id="projects-7" class="grade-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Grade 7 Collection</span>
+            <h2>Construct 2 Game Gallery</h2>
+            <p>Eksplorasi pertama kami dalam logika pemrograman game menggunakan Construct 3.</p>
+        </div>
+
+        <div class="project-grid">
+            <!-- Kartu Game 1: ocean maze -->
+            <div class="project-card game-card">
+                <div class="game-preview">
+                    <!-- Video -->
+                    <video class="game-video" autoplay muted loop>
+                        <source src="video-game-maze.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="project-info">
+                    <h3>Ocean Maze</h3>
+                    <div class="game-description">
+        <p>Kamu berperan sebagai pencari harta laut yang harus mengumpulkan seluruh pasokan ikan sebelum kucing lapar menemukanmu! Setelah semua ikan aman, sebuah portal dimensi (lubang kemenangan) akan terbuka untuk membawamu ke level berikutnya.</p>
+    </div>  
+                    <div class="game-meta">
+            <button onclick="openTutorial('maze')" class="btn-info">HOW TO PLAY?</button>
+            <button onclick="openGame('https://symphonious-frangollo-75082c.netlify.app/')" class="btn-play">PLAY NOW</button>
+        </div>
+
+<div id="modalMaze" class="tutorial-modal">
+    <div class="tutorial-content">
+        <div class="terminal-header">
+            <span class="status-dot"></span>
+            <span class="terminal-title">OCEAN MAZE GAME</span>
+            <button class="close-tutorial" onclick="closeTutorial('maze')">&times;</button>
+        </div>
+
+        <div class="tutorial-body">
+            <h2 class="glitch-text-small">MISSION: OCEAN MAZE</h2>
+            
+            <div class="instruction-grid">
+                <div class="inst-item">
+                    <span class="inst-label">OBJECTIVE</span>
+                    <span class="inst-value">Kumpulkan Ikan</span>
+                </div>
+                <div class="inst-item">
+                    <span class="inst-label">AVOID</span>
+                    <span class="inst-value">Kucing</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="inst-item">
+                    <span class="inst-label">MOVEMENT</span>
+                    <span class="inst-value">Gunakan Arrow Keys</span>
+                </div>
+                <div class="inst-item">
+                    <span class="inst-label">LIVES</span>
+                    <span class="inst-value">4 Nyawa Tersedia</span>
+                </div>
+
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div> 
+
+            <!-- Kartu Game 2 -->
+            <div class="project-card game-card">
+    <div class="game-preview">
+        <video class="game-video" autoplay muted loop>
+            <source src="video-game-focus.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="project-info">
+        <h3>Focus Mode Game</h3>
+        <div class="game-description">
+            <p>Hadapi gangguan gadget agar persiapan ujianmu sempurna! Jangan biarkan HP mengganggu konsentrasimu.</p>
+        </div>
+
+        <div class="game-meta">
+            <button onclick="openTutorial('focus')" class="btn-info">HOW TO PLAY?</button>
+            <button onclick="openGame('https://zesty-longma-30a366.netlify.app/')" class="btn-play">PLAY NOW</button>
+        </div>
+    </div>
+</div>
+
+<div id="modalFocus" class="tutorial-modal">
+    <div class="tutorial-content">
+        <div class="terminal-header">
+            <span class="status-dot"></span>
+            <span class="terminal-title">FOCUS MODE GAME</span>
+            <button class="close-tutorial" onclick="closeTutorial('focus')">&times;</button>
+        </div>
+
+        <div class="tutorial-body">
+            <h2 class="glitch-text-small">MISSION: FOCUS MODE</h2>
+            
+            <div class="instruction-grid">
+                <div class="inst-item">
+                    <span class="inst-label">Misi</span>
+                    <span class="inst-value">Kumpulkan Kertas</span>
+                </div>
+                <div class="inst-item">
+                    <span class="inst-label">Hindari</span>
+                    <span class="inst-value">Smartphone</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="inst-item">
+                    <span class="inst-label">MOVEMENT</span>
+                    <span class="inst-value">Arrow Keys</span>
+                </div>
+                <div class="inst-item">
+                    <span class="inst-label">ACTION</span>
+                    <span class="inst-value">Klik Enter untuk Shoot</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="inst-item" style="grid-column: span 2;">
+                    <span class="inst-label">SYSTEM NOTE</span>
+                    <span class="inst-value">Maintain focus to pass the final exam.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Section: Grade 8 Projects (Mobil RC) -->
+<section id="projects-8" class="grade-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Grade 8 Project</span>
+            <h2>RC CAR</h2>
+            <p>Integrasi hardware Arduino dengan kontrol aplikasi Bluetooth.</p>
+        </div>
+
+        <div class="rc-vertical-layout">
+            <div class="rc-visuals-stacked">
+                <div class="visual-card-v2">
+                    <div class="card-tag">LIVE ACTION</div>
+                    <video class="rc-video" autoplay muted loop>
+                        <source src="video-mobil-jalan.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="visual-card-v2">
+                    <div class="card-tag">HARDWARE SHOT</div>
+                    <img src="foto-mobil-rc.jpeg" alt="Mobil RC" class="rc-photo">
+                </div>
+            </div>
+
+            <div class="rc-details-v2">
+                <div class="tech-box">
+                    <div class="tech-body">
+                        <h3>🤖 MOBIL RC PROJECT</h3>
+                        <p>Proyek pengembangan mobil Remote Control berbasis Arduino yang dikontrol nirkabel melalui Bluetooth. Kunci utama dari proyek ini adalah integrasi antara hardware dan software MIT App Inventor.</p>
+                    </div>
+                </div>
+
+                <div class="tech-box accent">
+                    <div class="tech-body">
+                        <h3>📋 KOMPONEN UTAMA</h3>
+                        <ul class="blueprint-list">
+                            <li><strong>Motor DC:</strong> Penggerak utama roda.</li>
+                            <li><strong>Baterai:</strong> Suplai daya sistem.</li>
+                            <li><strong>Controller:</strong> Otak pemroses instruksi.</li>
+                            <li><strong>Motor Driver:</strong> Jembatan daya motor.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="tech-box">
+                    <div class="tech-body">
+                        <h3>📐 SKEMA RANGKAIAN</h3>
+                        <div class="diagram-wrapper">
+                            <img src="diagram-rangkaian.jpeg" alt="Skema" class="rc-diagram-v2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section: Grade 9 - Web Portfolio -->
+<section id="projects-9" class="grade-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Grade 9: Advanced Web Dev</span>
+            <h2>Digital Legacy Collection</h2>
+            <p>Representasi akhir kemampuan web development kami melalui integrasi HTML, CSS, dan JavaScript modern.</p>
+        </div>
+
+        <div class="web-portfolio-grid">
+            <!-- Website 1: ICT Final Project (Yang sedang kamu buat ini) -->
+            <div class="web-card glass-effect">
+                <div class="web-status">Live Project</div>
+                <div class="web-image">
+                    <img src="screenshot-final-project.png" alt="ICT Final Project Preview">
+                    <div class="web-overlay">
+                        <button onclick="window.open('#home')" class="btn-view-design">View Design</button>
+                    </div>
+                </div>
+                <div class="web-content">
+                    <h3>ICT Final Project</h3>
+                    <p class="web-description">Website portofolio interaktif yang merangkum seluruh perjalanan belajar ICT dari kelas 7 hingga 9.</p>
+                    
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Vercel</span>
+                    </div>
+
+                    <div class="feature-list">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Interactive Hero Slider</li>
+                            <li>Portofolio Digital</li>
+                            <li>Web Hosting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Website 2: ICT Show Semester 1 -->
+            <div class="web-card glass-effect">
+                <div class="web-status">Completed</div>
+                <div class="web-image">
+                    <img src="536.png" alt="ICT Show Website Preview">
+                    <div class="web-overlay">
+                        <button onclick="window.open('https://nyet.vercel.app/')" class="btn-view-site">Visit Site</button>
+                    </div>
+                </div>
+                <div class="web-content">
+                    <h3>Nusantara Food Fest</h3>
+                    <p class="web-description">Nusantara Food Fest, situs web yang berisi tentang beberapa sejarah dan fakta menarik diatas piring Nusantara.</p>
+                    <div class="feature-list">
+                        <h4><strong> Features:</strong></h4>
+                        <ul>
+                            <li>Dynamic Gallery</li>
+                            <li>Interactive Forms</li>
+                            <li>Smooth Transitions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--section achivment-->
+<section id="gallery" class="gallery-section">
+    <div class="section-container">
+        
+        <div class="gallery-group">
+            <div class="gallery-header">
+                <span class="mini-tag">AWARDS & RECOGNITION</span>
+                <h2 class="chic-title">Competition ✨</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-card prize">
+                    <div class="image-box">
+                        <img src="krenova.jpeg" alt="Krenova">
+                        <div class="status-badge">FINALIST Top-9</div>
+                    </div>
+                    <div class="card-text">
+                        <span class="event-year">2025</span>
+                        <h3>Krenova tingkat Kota Surakarta</h3>
+                        <p>Inovasi Simulasi Katrol.</p>
+                    </div>
+                </div>
+                <div class="gallery-card prize">
+                    <div class="image-box">
+                        <img src="irc.jpeg" alt="ICT Comp">
+                        <div class="status-badge">TOP 4</div>
+                    </div>
+                    <div class="card-text">
+                        <span class="event-year">2023</span>
+                        <h3>innovation Robotic Competition tingkat Nasional 2025</h3>
+                        <p>Juara Harapan 1.</p>
+                    </div>
+                </div>
+                <div class="gallery-card prize">
+                    <div class="image-box">
+                        <img src="cressenta.jpeg" alt="National">
+                        <div class="status-badge">TOP 6</div>
+                    </div>
+                    <div class="card-text">
+                        <span class="event-year">2025</span>
+                        <h3>Cressenta 2025</h3>
+                        <p>Juara Harapan 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-group" style="margin-top: 80px;">
+            <div class="gallery-header">
+                <span class="mini-tag">SCHOOL MEMORIES</span>
+                <h2 class="chic-title">ICT Activities 🏫</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-card school">
+                    <div class="image-box">
+                        <img src="ethic.jpeg" alt="Workshop">
+                    </div>
+                    <div class="card-text">
+                        <h3>ETHIC 2024</h3>
+                        <p>Sesi belajar bersama tentang dasar pemrograman melalui kegiatan camping.</p>
+                    </div>
+                </div>
+                <div class="gallery-card school">
+                    <div class="image-box">
+                        <img src="ictshow8.jpeg" alt="Exhibition">
+                    </div>
+                    <div class="card-text">
+                        <h3>ICT SHOW LEVEL 8</h3>
+                        <p>Pameran karya ICT di acara tahunan sekolah.</p>
+                    </div>
+                </div>
+                <div class="gallery-card school">
+                    <div class="image-box">
+                        <img src="awwalu.jpeg" alt="Seminar">
+                    </div>
+                    <div class="card-text">
+                        <h3>Presentasi di Awwalussanah 2025</h3>
+                        <p>Demo program ICT di hadapan calon siswa baru.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- section about me-->
+<section id="about" class="about-section">
+    <h2 class="section-title">THE CREATORS</h2>
+    
+    <div class="swiper aboutSwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide member-card" id="profile-felicia">
+                <div class="ijazah-frame">
+                    <img src="foto-felicia.png" alt="Felicia">
+                </div>
+                <h3 class="member-name">Azka Felicia Binar Velsignelse</h3>
+                <button class="info-toggle" onclick="toggleAbout('felicia')">LIHAT PROFIL</button>
+                <div id="detail-felicia" class="profile-detail">
+                    <p><strong>KELAS:</strong> 9F - SMP ABBS Surakarta</p>
+                    <p><strong>MINAT:</strong> Video Graphic & Baking</p>
+                    <p><strong>PENGALAMAN:</strong> Kabid Media selama 2 Periode, Mengikuti lomba Krenova, Crescenta, dll.</p>
+                    <p><strong>KESAN:</strong> "Debug adalah bagian dari seni."</p>
+                </div>
+            </div>
+            
+            <div class="swiper-slide member-card" id="profile-nabiela">
+                <div class="ijazah-frame">
+                    <img src="foto-nabiela.png" alt="Nabiela Fithria">
+                </div>
+                <h3 class="member-name">Nabiela Fithria</h3>
+                <button class="info-toggle" onclick="toggleAbout('nabiela')">LIHAT PROFIL</button>
+                <div id="detail-nabiela" class="profile-detail">
+                    <p><strong>KELAS:</strong> 9F - SMP ABBS Surakarta</p>
+                    <p><strong>MINAT:</strong> Creating, leading, and learning</p>
+                    <p><strong>PENGALAMAN:</strong> Mengikuti lomba krenova, Juara Harapan 1 IRC tingkat Nasional 2025.</p>
+                    <p><strong>KESAN:</strong> "Tiga tahun di SMP ABBS bukan hanya tentang angka di rapor, tapi tentang perjalanan menemukan siapa saya sebenarnya"</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide member-card" id="profile-arezti">
+                <div class="ijazah-frame">
+                    <img src="foto-arezti.png" alt="Arezti Hanan">
+                </div>
+                <h3 class="member-name">Arezti Hanan Hapsari</h3>
+                <button class="info-toggle" onclick="toggleAbout('arezti')">LIHAT PROFIL</button>
+                <div id="detail-arezti" class="profile-detail">
+                    <p><strong>KELAS:</strong> 9F - SMP ABBS</p>
+                    <p><strong>MINAT:</strong> Design</p>
+                    <p><strong>PENGALAMAN:</strong> Improving creativity, pouring imagination into innovation</p>
+                    <p><strong>KESAN:</strong> "I can't describe this feeling with words, but thank you for guiding us in learning something new."</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <p class="swipe-hint"><i class="fas fa-hand-pointer"></i> Geser kartu untuk melihat anggota lain</p>
+</section>
+
+        <!-- Section: Aspirasi -->
+<section id="aspirasi" class="contact-section">
+    <div class="container">
+        <div class="contact-header">
+            <span class="badge">Aspirasi & Feedback</span>
+            <h2>Beri Kami Masukan!</h2>
+        </div>
+        
+        <div class="contact-wrapper">
+            <form id="aspirasiForm" class="contact-form">
+                <div class="input-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="userName" placeholder="Nama kamu..." required>
+                </div>
+                <div class="input-group">
+                    <label>Pesan Aspirasi</label>
+                    <textarea id="userMessage" rows="5" placeholder="Tuliskan pesanmu di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary glow-button">KIRIM ASPIRASI</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Closing Screen Section -->
+<section class="epic-closing">
+    <div class="stars-overlay"></div>
+    <div class="closing-wrapper">
+        <h2 class="glitch-text" data-text="MISSION ACCOMPLISHED">MISSION ACCOMPLISHED</h2>
+        
+        <div class="credits-container">
+            <div class="credit-item">
+                <span class="role">The Visionaries</span>
+                <span class="names">Felicia, Arezti, Nabiela</span>
+            </div>
+            <div class="credit-item">
+                <span class="role">Special Thanks to</span>
+                <span class="names">SMP ABBS</span>
+            </div>
+        </div>
+
+        <div class="final-quote">
+            "Code is our legacy, innovation is our future."
+        </div>
+
+        <div class="action-buttons">
+            <button class="neon-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">RESTART EXPERIENCE</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Pop-up (Bersih) -->
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeGame()">&times;</span>
+        <!-- Iframe akan diisi otomatis via JS, tidak perlu teks di sini -->
+        <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
